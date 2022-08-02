@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <title>Technical Documentation</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+    <div class="row">
+        <nav id="navbar" class="navbar col-2 flex-column align-items-stretch p-3">
+            <ul class="nav navbar-nav position-fixed">
+                <!--tutto il menu sulla sinistra-->
+
+                <header class="nav-item navbar-brand">Bootstrap</header>
+                <li class="nav-item"><a class="nav-link" href="#getting_started">Getting Started</a></li>
+                <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
+                <li class="nav-item"><a class="nav-link" href="#javascript">JavaScript</a></li>
+                <li class="nav-item"><a class="nav-link" href="#build_tools">Build tools</a></li>
+                <li class="nav-item"><a class="nav-link" href="#accessibility">Accessibility</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc" class="col-10">
+            <section class="main-section container" id="getting_started">
+                <header class="h2">Getting Started</header>
+                <h3 class="text-muted">Get started with Bootstrap, the world’s most popular framework for building
+                    responsive, mobile-first
+                    sites, with jsDelivr and a template starter page.</h3>
+                <h4>Quick start</h4>
+                <p>Looking to quickly add Bootstrap to your project? Use jsDelivr, provided for free by the folks at
+                    jsDelivr. Using a package manager or need to download the source files? Head to the downloads page.
+                </p>
+                <h4>CSS</h4>
+                <p>Copy-paste the stylesheet &lt;link&gt; into your &lt;head&gt; before all other stylesheets to load
+                    our
+                    CSS.</p>
+                <pre> <code>&lt;link&gt; rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"&gt;</code></pre>
+            </section>
+            <hr>
+            <section class="main-section container" id="download">
+                <header class="h2">Download</header>
+                <h3 class="text-muted">Download Bootstrap to get the compiled CSS and JavaScript, source code, or
+                    include it with your
+                    favorite
+                    package managers like npm, RubyGems, and more.</h3>
+
+                <h4> Compiled CSS and JS</h4>
+                <p>Download ready-to-use compiled code for Bootstrap v4.0.0 to easily drop into your project, which
+                    includes:Compiled and minified CSS bundles (see CSS files comparison)
+                    Compiled and minified JavaScript pluginsThis doesn’t include documentation, source files, or any
+                    optional JavaScript dependencies (jQuery and
+                    Popper.js).</p>
+                <h4>Source files </h4>
+                <p> Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and
+                    documentation files. This option requires some additional tooling:
+
+                    Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
+                    Autoprefixer for CSS vendor prefixing
+                    Should you require build tools, they are included for developing Bootstrap and its docs, but they’re
+                    likely unsuitable for your own purposes.</p>
+            </section>
+            <hr>
+            <section class="main-section container" id="javascript">
+                <header class="h2">JavaScript</header>
+                <h3 class="text-muted"> Bring Bootstrap to life with our optional JavaScript plugins built on jQuery.
+                    Learn about each
+                    plugin,
+                    our
+                    data and programmatic API options, and more.</h3>
+
+                <h4> Individual or compiled</h4>
+                <p> Plugins can be included individually (using Bootstrap’s individual *.js files), or all at once using
+                    bootstrap.js or the minified bootstrap.min.js (don’t include both).</p>
+
+                <h4> Dependencies</h4>
+                <p> Some plugins and CSS components depend on other plugins. If you include plugins individually, make
+                    sure
+                    to
+                    check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means
+                    jQuery
+                    must be included before the plugin files). Consult our package.json to see which versions of jQuery
+                    are
+                    supported.</p>
+
+                Our dropdowns, popovers and tooltips also depend on Popper.js.
+
+                <h4> Data attributes</h4>
+                <p> Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes
+                    (our
+                    preferred way of using JavaScript functionality). Be sure to only use one set of data attributes on
+                    a
+                    single
+                    element (e.g., you cannot trigger a tooltip and modal from the same button.)
+
+                    However, in some situations it may be desirable to disable this functionality. To disable the data
+                    attribute
+                    API, unbind all events on the document namespaced with data-api like so:</p>
+                <pre> <code>$(document).off('.data-api')</code></pre>
+                <p>Alternatively, to target a specific plugin, just include the plugin’s name as a namespace along with
+                    the
+                    data-api namespace like this:</p>
+                <pre><code>$(document).off('.alert.data-api')</code></pre>
+            </section>
+            <hr>
+            <section class="main-section container" id="build_tools">
+                <header class="h2">Build tools</header>
+                <h3 class="text-muted">Learn how to use Bootstrap’s included npm scripts to build our documentation,
+                    compile source code,
+                    run
+                    tests, and more.</h3>
+                <h4>Tooling setup</h4>
+                <p>Bootstrap uses NPM scripts for its build system. Our package.json includes convenient methods for
+                    working
+                    with the framework, including compiling code, running tests, and more.</p>
+
+                <p> To use our build system and run our documentation locally, you’ll need a copy of Bootstrap’s source
+                    files and Node. Follow these steps and you should be ready to rock:</p>
+                <ol>
+                    <li> Download and install Node.js, which we use to manage our dependencies.</li>
+                    <li> Navigate to the root /bootstrap directory and run npm install to install our local dependencies
+                        listed in package.json.</li>
+                    <li> Install Ruby, install Bundler with gem install bundler, and finally run bundle install. This
+                        will
+                        install all Ruby dependencies, such as Jekyll and plugins. </li>
+
+                    <li> Windows users: Read this guide to get Jekyll up and running without problems.</li>
+                    <li> When completed, you’ll be able to run the various commands provided from the command line.</li>
+                </ol>
+                <h4>Tooling setup</h4>
+                <p>Our package.json includes the following commands and tasks:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Task</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td class="red">npm run dist</td>
+                        <td>npm run dist creates the /dist directory with compiled files. <span> Uses Sass,
+                                Autoprefixer,
+                                and UglifyJS.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="red">npm test</td>
+                        <td>Same as npm run dist plus it runs tests locally</td>
+                    </tr>
+                    <tr>
+                        <td class="red">npm run docs</td>
+                        <td>Builds and lints CSS and JavaScript for docs. You can then run the documentation locally via
+                            npm
+                            run docs-serve.</td>
+                    </tr>
+                </table>
+
+                <p>Run npm run to see all the npm scripts.</p>
+            </section>
+            <hr>
+            <section class="main-section container" id="accessibility">
+                <header class="h2">Accessibility</header>
+                <h3 class="text-muted">A brief overview of Bootstrap’s features and limitations for the creation of
+                    accessible content.
+                </h3>
+                <p>Bootstrap provides an easy-to-use framework of ready-made styles, layout tools, and interactive
+                    components, allowing developers to create websites and applications that are visually appealing,
+                    functionally rich, and accessible out of the box.</p>
+                <h4>Overview and Limitations</h4>
+                <p>The overall accessibility of any project built with Bootstrap depends in large part on the author’s
+                    markup, additional styling, and scripting they’ve included. However, provided that these have been
+                    implemented correctly, it should be perfectly possible to create websites and applications with
+                    Bootstrap that fulfill WCAG 2.0 (A/AA/AAA), Section 508 and similar accessibility standards and
+                    requirements.</p>
+                <h4>Structural markup</h4>
+                <p>Bootstrap’s styling and layout can be applied to a wide range of markup structures. This
+                    documentation
+                    aims to provide developers with best practice examples to demonstrate the use of Bootstrap itself
+                    and
+                    illustrate appropriate semantic markup, including ways in which potential accessibility concerns can
+                    be
+                    addressed.</p>
+                <h4>Visually hidden content</h4>
+                <p>Content which should be visually hidden, but remain accessible to assistive technologies such as
+                    screen
+                    readers, can be styled using the .sr-only class. This can be useful in situations where additional
+                    visual information or cues (such as meaning denoted through the use of color) need to also be
+                    conveyed
+                    to non-visual users.</p>
+                <pre> <code>&lt;p class="text-danger"&gt;&lt;span class="sr-only">Danger: &lt;/span&gt;This action is not reversible &lt;/p&gt;
+    </code></pre>
+                <p>For visually hidden interactive controls, such as traditional “skip” links, .sr-only can be combined
+                    with the .sr-only-focusable class. This will ensure that the control becomes visible once focused
+                    (for sighted keyboard users).</p>
+
+                <pre><code>&lt;a class="sr-only sr-only-focusable" href="#content"&gt;Skip to main content&lt;/a&gt;</code></pre>
+            </section>
+            <hr>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

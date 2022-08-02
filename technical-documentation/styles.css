@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+.nav-link, .nav-item {
+  max-width: 100% ;
+  width: fit-content;
+}
+ul { 
+  margin-left: 1vw ;
+}
+.navbar {
+  background-color: #f1f1f1;
+  min-width:fit-content;
+}
+.text-muted {
+  font-weight:lighter;
+}
+.red {
+  color: crimson;
+}
+pre {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+hr {
+  margin: 3 auto !important;
+}
+
+main {
+  position: relative;
+}
+@media print {
+  #navbar {
+    display: none;
+  }
+  .col-10 {
+    width: 100% !important;
+  }
+  pre {
+    width: 100%;
+    white-space: pre-wrap;
+  }
+}

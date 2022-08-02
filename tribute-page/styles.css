@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    width: 80%;
+    margin: 0 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+
+header {
+    display: flex;
+    background-color:black;
+    color: black;
+}
+
+header > #title {
+    flex: 1.2;
+    background-color: #FFF200;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    border-right: 5px solid black;
+}
+header > nav {
+    flex: 1.5;
+    background-color: white;
+    display: flex;
+}
+
+header > nav > ul {
+    display: flex;
+    flex: content;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    flex:content;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 15px;
+}
+
+nav > ul > li > a:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+q {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin: 3vw auto 5px auto;
+    color: #FFF200;
+}
+.piccolo {
+    font-size: xx-small;
+}
+.frase > p {
+    text-align: right;
+    margin: 5px auto 3vw auto;
+}
+
+
+#img-div {
+    text-align: left;
+}
+figcaption {
+    text-align: center;
+}
+#image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+hr {
+    border: none;
+    height: 0.1vw;
+    width: 100%;
+    background-color: red;
+    margin: 3vw 0;
+}
+
+.opera {
+    display: flex;
+    width: 100%;
+    margin: 5vw auto;
+}
+
+.opera > img {
+    flex: 1;
+    max-width: 35%;
+    height: auto;
+    margin: 1vw;
+}
+
+.opera > .descrizione {
+    width: 65%;
+}
+
+.trittico {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.trittico > img {
+ max-width: 33.33%;
+}
+
+.footer {
+    background-color: #FFF200;
+    color: black;
+    padding: 10px 0 10px 0;
+    margin-top: 3px solid black;
+}
+.footer a {
+    color: black;
+    font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+    
+    body {
+        width: 100%;
+        margin: 0;
+    }
+    .opera {
+        display: block;
+        width: 100%;
+        margin: 5vw auto;
+    }
+    .opera .descrizione {
+        width: 100%;
+    }
+    .opera > img {
+        max-width: 80%;
+        height: auto;
+        max-height: 30%;
+        margin: 0;
+    }
+    
+}

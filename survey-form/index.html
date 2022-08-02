@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Survey Form</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">This is a Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve</p>
+  </header>
+  <div class="flex-container">
+    <form id="survey-form" action="#">
+      <fieldset>
+        <label id="name-label">Name <input id="name" type="text" placeholder="Enter your name" required></label>
+        <label id="email-label">Email <input id="email" type="email" placeholder="Enter your email" required></label>
+        <label id="number-label">Age (optional) <input id="number" type="number" min="16" max="200" placeholder="Age"></label>
+      </fieldset>
+      <hr />
+      <fieldset>
+        <label>How did you learn about us? 
+          <select name="learn-dropdown" id="dropdown">
+            <option selected disabled>Select one</option>
+            <option value="newspaper">Newspapers</option>
+            <option value="social">Social Media</option>
+            <option value="adv">Online advertising</option>
+            <option value="friends">Friends</option>
+            <option value="other">Other</option>
+          </select></label>
+        <label>Would you recommend us to a friend? <br><label class="check"> Yes <input type="radio" name="recommend" value="yes"></label><label class="check"> No <input type="radio" name="recommend" value="no"></label></label>
+        </fieldset>
+        <hr />
+          <fieldset>
+        <label>Which of the following did you find most useful? <label><input type="checkbox" value="check-1"> The flexible questionnaire design</label>
+        <label><input type="checkbox" value="check-2"> The email invitation function</label>
+        <label><input type="checkbox" value="check-3"> The reporting module</label>
+        <label><input type="checkbox" value="check-4"> The surveys quality</label>
+        </label>
+        </fieldset>
+        <hr />
+        <fieldset>
+          <label>Any comments or suggestions? <textarea placeholder="Enter your comments here..." rows="5" cols="30"></textarea></label>
+          </fieldset>
+          <input id="submit" type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
