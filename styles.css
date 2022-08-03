@@ -37,10 +37,16 @@ body {
     height: 100vw;
 }
 
+.project-tile {
+  height: 15vw !important;
+  overflow: hidden !important;
+  margin: 1vw auto;
+  max-height: 190px;
+}
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
   }
   
   /* Track */
