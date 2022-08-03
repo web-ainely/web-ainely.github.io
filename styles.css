@@ -38,10 +38,19 @@ body {
 }
 
 #welcome-section {
-  color: var(--welcome-font-color);
   height: 100vh;
-  display: flex;
+}
 
+#welcome-section h1 {
+  color: var(--welcome-font-color) !important; 
+  font-family: 'pixelmix', sans-serif;
+  margin-top: 32vh;
+  margin-left: 5%;
+  font-size: 15vh;
+}
+
+#welcome-section h3 {
+  margin-left: 6%;
 }
 
 #welcome-section .mini-me {
@@ -66,7 +75,6 @@ body {
   height: 20rem;
   transform: rotate(45deg);
   z-index: 2;
-
 }
 
 .project-tile { 
@@ -105,7 +113,7 @@ body {
   }
 
 
-  @keyframes smile{
+  @keyframes smile {
     0%{
         background-image: url(icon.png);
     }
