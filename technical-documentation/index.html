@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -17,20 +21,24 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
     <div class="row">
-        <nav id="navbar" class="navbar col-2 flex-column align-items-stretch p-3">
-            <ul class="nav navbar-nav position-fixed">
+        <nav id="navbar" class="navbar col-2 flex-column align-items-stretch p-3 position-fixed">
+            <header class="navbar-brand">Bootstrap</header>
+            <ul id="mylinks" class="nav navbar-nav">
                 <!--tutto il menu sulla sinistra-->
-
-                <header class="nav-item navbar-brand">Bootstrap</header>
                 <li class="nav-item"><a class="nav-link" href="#getting_started">Getting Started</a></li>
                 <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
                 <li class="nav-item"><a class="nav-link" href="#javascript">JavaScript</a></li>
                 <li class="nav-item"><a class="nav-link" href="#build_tools">Build tools</a></li>
                 <li class="nav-item"><a class="nav-link" href="#accessibility">Accessibility</a></li>
             </ul>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
         <main id="main-doc" class="col-10">
             <section class="main-section container" id="getting_started">
+                <p class="space">&nbsp;</p>
                 <header class="h2">Getting Started</header>
                 <h3 class="text-muted">Get started with Bootstrap, the world’s most popular framework for building
                     responsive, mobile-first
@@ -47,6 +55,7 @@
             </section>
             <hr>
             <section class="main-section container" id="download">
+                <p class="space">&nbsp;</p>
                 <header class="h2">Download</header>
                 <h3 class="text-muted">Download Bootstrap to get the compiled CSS and JavaScript, source code, or
                     include it with your
@@ -70,6 +79,7 @@
             </section>
             <hr>
             <section class="main-section container" id="javascript">
+                <p class="space">&nbsp;</p>
                 <header class="h2">JavaScript</header>
                 <h3 class="text-muted"> Bring Bootstrap to life with our optional JavaScript plugins built on jQuery.
                     Learn about each
@@ -112,6 +122,7 @@
             </section>
             <hr>
             <section class="main-section container" id="build_tools">
+                <p class="space">&nbsp;</p>
                 <header class="h2">Build tools</header>
                 <h3 class="text-muted">Learn how to use Bootstrap’s included npm scripts to build our documentation,
                     compile source code,
@@ -166,6 +177,7 @@
             </section>
             <hr>
             <section class="main-section container" id="accessibility">
+                <p class="space">&nbsp;</p>
                 <header class="h2">Accessibility</header>
                 <h3 class="text-muted">A brief overview of Bootstrap’s features and limitations for the creation of
                     accessible content.
@@ -205,7 +217,48 @@
             <hr>
         </main>
     </div>
-    <footer></footer>
+    <script>
+
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function hamburgerFunction() {
+            var x = document.getElementById("mylinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function mediaFunction(x) {
+  if (x.matches) { // If media query matches
+    document.getElementById("main-doc").classList.remove("col-10");
+    document.getElementById("navbar").classList.remove("col-2");
+    document.getElementById("navbar").classList.add("position-fixed");
+    document.getElementById("mylinks").classList.remove("position-fixed");
+    let navItems = document.getElementsByClassName("nav-item");
+    for (let i = 0; i < navItems.length; i++) {
+        const navItem = navItems[i];
+        navItem.addEventListener("click", hamburgerFunction);        
+    }
+  } else { 
+    document.getElementById("main-doc").classList.add("col-10");
+    document.getElementById("navbar").classList.add("col-2");
+    document.getElementById("navbar").classList.remove("position-fixed");
+    document.getElementById("mylinks").classList.add("position-fixed");
+    document.getElementById("mylinks").style.display = "block";
+    let navItems = document.getElementsByClassName("nav-item");
+    for (let i = 0; i < navItems.length; i++) {
+        const navItem = navItems[i];
+        navItem.removeEventListener("click", hamburgerFunction);        
+    }
+  }
+}
+
+var x = window.matchMedia("(max-width: 800px)")
+mediaFunction(x) // Call listener function at run time
+x.addListener(mediaFunction) // Attach listener function on state changes
+
+    </script>
 </body>
 
 </html>
