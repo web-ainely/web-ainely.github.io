@@ -1,0 +1,10 @@
+.project-tile {
+    height: 15vw !important;
+    overflow: hidden !important;
+    margin: 1vw auto;
+    max-height: 190px;
+}
+
+#projects .btn {
+    font-family: 'pixelmix', sans-serif;
+}

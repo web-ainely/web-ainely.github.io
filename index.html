@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+
+    <!-- file css styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="card-styles.css">
+    <link rel="stylesheet" href="media-query.css">
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -13,10 +19,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/395b4272ad.js" crossorigin="anonymous"></script>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--  The font file "pixelmix" was created by Andrew Tyler www.AndrewTyler.net and font@andrewtyler.net  -->
 </head>
 
 <body class="grey lighten-2">
@@ -28,11 +37,14 @@
         </ul>
     </nav>
     <section id="welcome-section">
-        <h1>asdfghjklò</h1>
-        <p>asdcfgvbhjnm ucvfguohuohjgdni thg ocj o </p>
+        &nbsp;
+        <h1>Hi I'm Ylenia</h1>
+        <h3>Graphic and web designer</h3>
+        <div class="img-box"> </div>
+        <div class="mini-me"></div>
     </section>
     <section id="projects" class="container">
-       <br> <br> <br> <br>
+        <br> <br> <br>
         <div class="project-tile card">
             <div class="row no-gutters">
                 <div class="col-sm-5">
@@ -45,7 +57,7 @@
                         <h5 class="card-title">Landing page</h5>
                         <p class="card-text">This is a quick landing page I created for my freeCodeCamp certification in
                             responsive Web Design</p>
-                        <a href="./landing-page/index.html" target="_blank" class="btn btn-primary">View Profile</a>
+                        <a href="./landing-page/index.html" target="_blank" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
             </div>
@@ -64,7 +76,7 @@
                         <p class="card-text">This is a quick technical documentation page I created for my freeCodeCamp
                             certification in responsive Web Design</p>
                         <a href="./technical-documentation/index.html" target="_blank" class="btn btn-primary">View
-                            Profile</a>
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +93,7 @@
                         <h5 class="card-title">Survey form</h5>
                         <p class="card-text">This is a survey form page I created for my freeCodeCamp certification in
                             responsive Web Design</p>
-                        <a href="./survey-form/index.html" target="_blank" class="btn btn-primary">View Profile</a>
+                        <a href="./survey-form/index.html" target="_blank" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
             </div>
@@ -98,26 +110,26 @@
                         <h5 class="card-title">Tribute page</h5>
                         <p class="card-text">This is a quick tribute page I created for my freeCodeCamp certification in
                             responsive Web Design</p>
-                        <a href="./tribute-page/index.html" target="_blank" class="btn btn-primary">View Profile</a>
+                        <a href="./tribute-page/index.html" target="_blank" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <p>Your portfolio should have at least one media query</p>
     </section>
-    <section id="contatti">
-        <a href="https://www.freecodecamp.org/web-ainely" target="_blank" id="profile-link">freCodeCamp</a>
-    </section>
+    <div id="mobile-me">
+        <div class="img-box"> </div>
+        <div class="mini-me"></div>
+    </div>
+    <footer id="contacts">
+        <hr>
+        <a href="www.linkedin.com/in/ylenia-chiappori-10b679247" target="_blank" title="LinkedIn" class="profile-link"><i
+                class="fa-brands fa-linkedin-in fa-lg"></i></a>
+        <a href="https://github.com/web-ainely" target="_blank" title="Github" class="profile-link"><i
+                class="fa-brands fa-github fa-lg"></i></a>
+        <a href="https://www.freecodecamp.org/web-ainely" target="_blank" title="freeCodeCamp" class="profile-link"><i
+                class="fa-brands fa-free-code-camp fa-lg"></i></a>
+        </footer>
 
 </body>
 
 </html>
-
-
-<!-- RIFERIMENTI
-
-https://www.michelleovalle.com/
-https://nad.is/building
-
--->
