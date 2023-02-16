@@ -4,6 +4,16 @@
     max-height: 190px;
 }
 
+#projects.container {
+    margin: 0 auto;
+}
+
 #projects .btn {
     font-family: 'pixelmix', sans-serif;
+}
+
+.card-img {
+    height: 100% !important;
+    width: max-content;
+    overflow: hidden;
 }

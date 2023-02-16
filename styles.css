@@ -18,59 +18,20 @@ body {
 #navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  display: block;
   background-color: var(--background-color);
   z-index: 10;
   font-size: 1.8rem;
   font-weight: bold;
   font-family: 'pixelmix', sans-serif;
 }
-
+#navbar ul { 
+  display: inline;
+}
 .nav-link {
+  float: right;
   color: var(--sezioni) !important;
-}
-
-#welcome-section {
-  height: 100vh;
-}
-
-#welcome-section h1 {
-  color: var(--welcome-font-color) !important;
-  font-family: 'pixelmix', sans-serif;
-  margin-top: 32vh;
-  margin-left: 5%;
-  font-size: 15vh;
-}
-
-#welcome-section h3 {
-  margin-left: 6%;
-}
-
-#welcome-section .mini-me {
-  position: absolute;
-  top: 25%;
-  right: 10%;
-  width: 20rem;
-  height: 20rem;
-  z-index: 3;
-  background-image: url(icon.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: smile 3s step-end infinite;
-}
-
-#welcome-section .img-box {
-  background-color: var(--sezioni);
-  position: absolute;
-  top: 28%;
-  right: 10%;
-  width: 20rem;
-  height: 20rem;
-  transform: rotate(45deg);
-  z-index: 2;
 }
 
 #mobile-me .mini-me,

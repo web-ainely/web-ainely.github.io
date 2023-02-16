@@ -133,7 +133,7 @@ hr {
     font-style: italic;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     
     body {
         width: 100%;

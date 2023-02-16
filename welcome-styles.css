@@ -1,0 +1,39 @@
+#welcome-section {
+    height: 100vh;
+  }
+  
+  #welcome-section h1 {
+    color: var(--welcome-font-color) !important;
+    font-family: 'pixelmix', sans-serif;
+    margin-top: 32vh;
+    margin-left: 4%;
+    font-size: 6vw;
+  }
+  
+  #welcome-section h3 {
+    margin-left: 6%;
+  }
+  
+  #welcome-section > .mini-me {
+    position: absolute;
+    top: 26vh;
+    right: 8%;
+    width: 26vw;
+    height: 26vw;
+    z-index: 3;
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: smile 3s step-end infinite;
+  }
+  
+  #welcome-section > .img-box {
+    background-color: var(--sezioni);
+    position: absolute;
+    top: 28vh;
+    right: 8%;
+    width: 26vw;
+    height: 26vw;
+    transform: rotate(45deg);
+    z-index: 2;
+  }
